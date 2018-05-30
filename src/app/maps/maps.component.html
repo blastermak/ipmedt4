@@ -1,9 +1,5 @@
-<div class="container">
-		<script src='assets/js/maps.js'></script>
-		<h1 class="jumbotron-heading">Spot de ziekte van Lyme</h1>
-		<p class="lead text-muted">Op de onderstaande kaart valt te zien waar de ziekte mogelijk te vinden is</p>
-		<div id="map" style="height: 500px;">
-		</div>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdPJ1SGiawhtx2KkopheI6RO_DHV6TSu4&callback=initMap"
-		async defer></script>
+
+<div style="height: 300px;"
+     leaflet
+     [leafletOptions]="mapOptions" >
 </div>
