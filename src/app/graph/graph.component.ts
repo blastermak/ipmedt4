@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import {Chart} from 'chart.js'
 
+//npm install chart.js --save
+
 @Component({
   selector: 'app-graph',
   templateUrl: './graph.component.html',
