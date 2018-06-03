@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { DagboekComponent } from './dagboek/dagboek.component';
 import {QuizComponent} from './quiz/quiz.component';
 import { GraphComponent } from './graph/graph.component';
-
+import { InfoComponent} from './info/info.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,8 @@ import { GraphComponent } from './graph/graph.component';
 		HomeComponent,
 		DagboekComponent,
     QuizComponent,
-    GraphComponent
+    GraphComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
