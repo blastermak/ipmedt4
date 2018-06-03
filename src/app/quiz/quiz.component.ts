@@ -21,8 +21,8 @@ export class QuizComponent implements OnInit {
       console.log();
 
       // store answers in an array
-      const n = (new Date()).getTime();
-      const answers = [n];
+      // n = (new Date()).getTime();
+      const answers = [];
       let score = 0;
 
       // if the restart button is pressed, start quiz again
@@ -77,7 +77,7 @@ export class QuizComponent implements OnInit {
 
           for (let i = 0; i < answers.length; i++) {
             const temp = answers[i];
-            if (temp == 'Ja') {
+            if (temp === 'Ja') {
               score = score + 1;
             }
             // Do something
