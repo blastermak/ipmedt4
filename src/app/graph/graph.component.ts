@@ -14,7 +14,7 @@ export class GraphComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
+    $( document ).ready(function() {
     let myChart = document.getElementById('myChart').getContext('2d');
     let massPopChart = new Chart(myChart,{
     type:'bar',
@@ -39,7 +39,9 @@ export class GraphComponent implements OnInit {
       }
 
     }
-});
+    });  });
+
+
   }
 
 }
