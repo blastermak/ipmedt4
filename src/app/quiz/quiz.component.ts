@@ -77,7 +77,7 @@ export class QuizComponent implements OnInit {
 
           for (let i = 0; i < answers.length; i++) {
             const temp = answers[i];
-            if (temp == 'Ja') {
+            //if (temp == 'Ja') {
               score = score + 1;
             }
             // Do something

@@ -10,6 +10,7 @@ import { MapsComponent } from './maps/maps.component';
 import { HomeComponent } from './home/home.component';
 import { DagboekComponent } from './dagboek/dagboek.component';
 import {QuizComponent} from './quiz/quiz.component';
+import { GraphComponent } from './graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {QuizComponent} from './quiz/quiz.component';
 		MapsComponent,
 		HomeComponent,
 		DagboekComponent,
-    QuizComponent
+    QuizComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,

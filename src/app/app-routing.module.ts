@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { MapsComponent } from './maps/maps.component';
 import { DagboekComponent } from './dagboek/dagboek.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { GraphComponent } from './graph/graph.component';
 //import { PageNotFoundComponent }    from './not-found.component';
 
 const appRoutes: Routes = [{
@@ -18,6 +19,9 @@ const appRoutes: Routes = [{
 }, {
   path: 'quiz',
   component: QuizComponent
+},{
+  path: 'graph',
+  component: GraphComponent
 }, {
   path: '',   redirectTo: '/home', pathMatch: 'full'
 }
