@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { latLng, tileLayer, polygon, overlays, layers } from 'leaflet';
+import { latLng, tileLayer, polygon } from 'leaflet';
 
 @Component({
   selector: 'app-maps',
