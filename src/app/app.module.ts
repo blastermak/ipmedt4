@@ -9,7 +9,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 import { MapsComponent } from './maps/maps.component';
 import { HomeComponent } from './home/home.component';
 import { DagboekComponent } from './dagboek/dagboek.component';
-import {QuizComponent} from './quiz/quiz.component';
+import { QuizComponent} from './quiz/quiz.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {QuizComponent} from './quiz/quiz.component';
 		MapsComponent,
 		HomeComponent,
 		DagboekComponent,
-    QuizComponent
+    QuizComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
