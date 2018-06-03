@@ -1,0 +1,99 @@
+body {
+    background: white;
+    color: black;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 50px;
+    overflow-y: hidden;
+}
+
+.quiz {
+    //border: 1px solid #111;
+    background-color: white;
+}
+.progress {
+    background-color: #555;
+    margin-bottom: 0;
+    height: 3px;
+    border-radius: 0;
+}
+.progress-bar {
+    background-color: #26c423;
+}
+
+
+.cardHolder {
+    background-color: white;
+    min-height: 300px;
+}
+
+[class^='card-'], .cardEnd {
+    background-color: white;
+    padding: 50px;
+}
+h2 {
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+span {
+    opacity: 0.5;
+}
+
+#map {
+    width: 500px;
+    height: 350px;
+    margin: auto;
+}
+
+
+.btn {
+    background-color: #26c423;
+    border: none;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 30px;
+
+    -webkit-transition: all 0.5s !important;
+    -moz-transition: all 0.5s !important;
+    -ms-transition: all 0.5s !important;
+    -o-transition: all 0.5s !important;
+    transition: all 0.5s !important;
+}
+.btn:hover {
+     background-color: #161616 !important;
+     //outline: 1px solid #26c423 !important;
+ }
+.btn:focus {
+     background-color: #191919 !important;
+     border: 1px solid #191919 !important;
+     //outline: 1px solid #26c423 !important;
+ }
+.btn:active {
+     background-color: #111 !important;
+     //outline: 1px solid #26c423 !important;
+}
+
+.back {
+    font-size: 12px;
+    position: absolute;
+    padding: 10px 15px;
+    left: 15px;
+    margin: 10px;
+    opacity: 0.7;
+    z-index: 10;
+}
+.hidden {
+    visibility: hidden !important;
+}
+.row {
+    margin-top: 20px;
+}
+.theEnd {
+  padding: 50px;
+}
+#score{
+  padding-bottom: 20px;
+}
