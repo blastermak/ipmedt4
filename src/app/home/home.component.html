@@ -1,78 +1,91 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="jumbotron text-center">
-		<div class="container">
-				<h1 class="jumbotron-heading">Heb ik de ziekte van Lyme?</h1>
-				<p class="lead text-muted">Er zijn erg veel symptomen en soms is het moeilijk of ze nou onderdeel zijn van de ziekte van Lyme
-				neem daarom hier de test!</p>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/logov3.png">
 
-						<a href="#" role="button" class="btn btn-primary btn-spacing" >Doe de test! </a>
+    <title>Metics</title>
 
-						<a href="#" role="button" class="btn btn-secondary btn-spacing">Meer informatie </a>
 
-		</div>
-</div>
-<div class="album py-5 bg-light">
-		<div class="container">
-				<div class="row">
-						<div class="col-md-3">
-								<div class="card mb-4 box-shadow">
-										<img height="238px"  class="card-img-top" src="assets/img/dagboek.png" alt="Card image cap">
-										<div class="card-body">
-												<p class="card-text">Vul hier je dagelijkse vorderingen, gedachtes en andere zaken in van het ziekteproces</p>
-												<div class="d-flex justify-content-between align-items-center">
-														<div class="btn-group">
-																<a routerLink="/dagboek" routerLinkActive="active" class="btn btn-primary my-2">Ga</a>
+    <!-- Custom styles for this template -->
+</head>
 
-														</div>
-												</div>
-										</div>
-								</div>
-						</div>
-						<div class="col-md-3">
-								<div class="card mb-4 box-shadow">
-										<img class="card-img-top" src="assets/img/tekenradar.png" alt="Card image cap">
-										<div class="card-body">
-												<p class="card-text">Wil je weten waar je moet uitkijken voor teken. Kijk dan hier even voor de meest risicovolle plekken</p>
-												<div class="d-flex justify-content-between align-items-center">
-														<div class="btn-group">
-																<a routerLink="/maps" routerLinkActive="active" role="button" class="btn btn-primary">Go!</a>
+<body>
 
-														</div>
-														<small class="text-muted">9 mins</small>
-												</div>
-										</div>
-								</div>
-						</div>
-						<div class="col-md-3">
-								<div class="card mb-4 box-shadow">
-										<img height="261px" class="card-img-top" src="assets/img/info.png" alt="Card image cap">
-										<div class="card-body">
-												<p class="card-text">Wil je wat meer informatie over teken en de ziekte van Lyme. Kijk dan even hier voor alle tips en tricks</p>
-												<div class="d-flex justify-content-between align-items-center">
-														<div class="btn-group">
-																<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-																<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-														</div>
-														<small class="text-muted">9 mins</small>
-												</div>
-										</div>
-								</div>
-						</div>
-						<div class="col-md-3">
-								<div class="card mb-4 box-shadow">
-										<img class="card-img-top" src="assets/img/loep.png" alt="Card image cap">
-										<div class="card-body">
-												<p class="card-text">Wil je weten hoe je makkelijk een tekenplek kan detecteren of herkennen. Kijk dan hier!</p>
-												<div class="d-flex justify-content-between align-items-center">
-														<div class="btn-group">
-																<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-																<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-														</div>
-														<small class="text-muted">9 mins</small>
-												</div>
-										</div>
-								</div>
-						</div>
-				</div>
-		</div>
-</div>
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Heb ik de ziekte van Lyme?</h1>
+            <p class="lead text-muted">Er zijn erg veel symptomen en soms is het moeilijk of ze nou onderdeel zijn van de ziekte van Lyme
+            neem daarom hier de test!</p>
+            <p>
+              <a routerLink="/quiz" routerLinkActive="active" role="button" class="btn btn-primary">Doe de test!</a>
+              <a routerLink="/info" routerLinkActive="active" role="button" class="btn btn-primary">Meer informatie!</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="assets/img/dagboek1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Vul hier je dagelijkse vorderingen, gedachtes en andere zaken in van het ziekteproces</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                  <a routerLink="/dagboek" routerLinkActive="active" class="btn btn-primary my-2">Go!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="assets/img/tekenradar1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Wil je weten waar je moet uitkijken voor teken. Kijk dan hier even voor de meest risicovolle plekken</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                  <a routerLink="/maps" routerLinkActive="active" role="button" class="btn btn-primary">Go!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="assets/img/info1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Wil je wat meer informatie over teken en de ziekte van Lyme. Kijk dan even hier voor alle tips en tricks</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                  <a routerLink="/info" routerLinkActive="active" role="button" class="btn btn-primary">Go!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>Metics &trade;</p>
+    </div>
+</footer>
+</body>
+</html>
