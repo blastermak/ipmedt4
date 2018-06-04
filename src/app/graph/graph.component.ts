@@ -17,8 +17,10 @@ export class GraphComponent implements OnInit {
 
     $(document).ready(function () {
 
-      const myChart = document.getElementById('myChart').getContext('2d');
-      const massPopChart = new Chart(myChart, {
+
+      const myChart = <HTMLCanvasElement> document.getElementById('myChart');
+			const ctx = myChart.getContext('2d');
+      const massPopChart = new Chart(ctx, {
         type: 'bar',
         data: {
           labels: ['Hoofdpijn', 'SpierPijn', 'Lorem', 'Lorem', 'Lorem'],
