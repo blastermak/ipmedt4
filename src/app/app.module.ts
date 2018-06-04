@@ -11,7 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { DagboekComponent } from './dagboek/dagboek.component';
 import {QuizComponent} from './quiz/quiz.component';
 import { GraphComponent } from './graph/graph.component';
-import { InfoComponent} from './info/info.component'
+import { InfoComponent} from './info/info.component';
+import { LoginComponent } from './login/login.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { InfoComponent} from './info/info.component'
 		DagboekComponent,
     QuizComponent,
     GraphComponent,
-    InfoComponent
+    InfoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

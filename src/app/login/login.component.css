@@ -1,0 +1,39 @@
+.body
+{
+  background-color: white;
+  background-image: url('../../assets/img/Logov2.png');
+}
+
+.row
+{
+  /*background-image: url('body.jpg')!important;*/
+  height: 100vh !important;
+}
+
+h1,h2,p
+{
+    color: #000;
+}
+
+#LoginLogo
+{
+  height: 40%;
+  width: 40%;
+}
+
+#LoginLeft
+{
+  padding-top: 13%;
+  text-align: center;
+  height: 100vh !important;
+  background-color:rgba(211,211,211, 0.1)
+}
+
+#LoginRight
+{
+  padding-top: 15%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100vh !important;
+  text-align: center;
+}
