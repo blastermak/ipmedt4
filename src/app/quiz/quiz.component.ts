@@ -82,7 +82,7 @@ export class QuizComponent implements OnInit {
               score = score + 1;
             }*/
             // Do something
-          }
+          // }
           if (score <= 6) {
             $('#score').html('Je hebt weinig symptomen');
           }

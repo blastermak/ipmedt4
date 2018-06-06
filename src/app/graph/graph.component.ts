@@ -18,66 +18,66 @@ export class GraphComponent implements OnInit {
 
     $(document).ready(function () {
 
-      var Highcharts = require('highcharts');
+      // var Highcharts = require('highcharts');
 
       // Load module after Highcharts is loaded
-      require('highcharts/modules/exporting')(Highcharts);
+      // require('highcharts/modules/exporting')(Highcharts);
 
       // Create the chart
-      Highcharts.chart('container', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Klachten chart '
-    },
-
-    xAxis: {
-        type: 'category',
-        labels: {
-            rotation: -45,
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        }
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: 'Aantal Klachten'
-        }
-    },
-    legend: {
-        enabled: false
-    },
-    tooltip: {
-        pointFormat: 'Aantal klachten: <b>{point.y:.1f}</b>'},
-    series: [{
-        name: 'Population',
-        data: [
-            ['aliquet', 24.2],
-            ['scelerisque', 20.8],
-            ['consequat', 14.9],
-            ['Vestibulum', 13.7],
-            [' rhoncus', 13.1],
-            ['ullamcorper', 12.7],
-            ['Quisque ', 12.4],
-
-        ],
-        dataLabels: {
-            enabled: true,
-            rotation: -90,
-            color: '#FFFFFF',
-            align: 'right',
-            format: '{point.y:.1f}', // one decimal
-            y: 10, // 10 pixels down from the top
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        }
-    }]
+    //   Highcharts.chart('container', {
+    // chart: {
+    //     type: 'column'
+    // },
+    // title: {
+    //     text: 'Klachten chart '
+    // },
+		//
+    // xAxis: {
+    //     type: 'category',
+    //     labels: {
+    //         rotation: -45,
+    //         style: {
+    //             fontSize: '13px',
+    //             fontFamily: 'Verdana, sans-serif'
+    //         }
+    //     }
+    // },
+    // yAxis: {
+    //     min: 0,
+    //     title: {
+    //         text: 'Aantal Klachten'
+    //     }
+    // },
+    // legend: {
+    //     enabled: false
+    // },
+    // tooltip: {
+    //     pointFormat: 'Aantal klachten: <b>{point.y:.1f}</b>'},
+    // series: [{
+    //     name: 'Population',
+    //     data: [
+    //         ['aliquet', 24.2],
+    //         ['scelerisque', 20.8],
+    //         ['consequat', 14.9],
+    //         ['Vestibulum', 13.7],
+    //         [' rhoncus', 13.1],
+    //         ['ullamcorper', 12.7],
+    //         ['Quisque ', 12.4],
+		//
+    //     ],
+    //     dataLabels: {
+    //         enabled: true,
+    //         rotation: -90,
+    //         color: '#FFFFFF',
+    //         align: 'right',
+    //         format: '{point.y:.1f}', // one decimal
+    //         y: 10, // 10 pixels down from the top
+    //         style: {
+    //             fontSize: '13px',
+    //             fontFamily: 'Verdana, sans-serif'
+    //         }
+    //     }
+    // }]
 });
 
 
