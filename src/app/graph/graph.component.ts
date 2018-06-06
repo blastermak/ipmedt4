@@ -107,7 +107,7 @@ export class GraphComponent implements OnInit {
 
         }
       });*/
-    });
+    // });
   }
 
 }
