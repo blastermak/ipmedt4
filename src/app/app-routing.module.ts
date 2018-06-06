@@ -6,6 +6,7 @@ import { DagboekComponent } from './dagboek/dagboek.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { InfoComponent } from './info/info.component';
 import { GraphComponent } from './graph/graph.component';
+import { LoginComponent} from './login/login.component';
 //import { PageNotFoundComponent }    from './not-found.component';
 
 const appRoutes: Routes = [{
@@ -26,6 +27,9 @@ const appRoutes: Routes = [{
 },{
   path: 'graph',
   component: GraphComponent
+},{
+  path: 'login',
+  component: LoginComponent
 }, {
   path: '',   redirectTo: '/home', pathMatch: 'full'
 }
