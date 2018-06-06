@@ -75,12 +75,12 @@ export class QuizComponent implements OnInit {
         if (currentCard === 13) {
           $('.theEnd').delay(450).removeClass('hidden').hide().fadeIn();
 
-          for (let i = 0; i < answers.length; i++) {
+          /*for (let i = 0; i < answers.length; i++) {
             const temp = answers[i];
 
             if (temp === 'Ja') {
               score = score + 1;
-            }
+            }*/
             // Do something
           }
           if (score <= 6) {
