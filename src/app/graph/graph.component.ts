@@ -3,6 +3,8 @@ import * as $ from 'jquery';
 import {Chart} from 'chart.js'
 
 
+
+
 //npm install chart.js --save
 
 @Component({
@@ -18,66 +20,133 @@ export class GraphComponent implements OnInit {
 
     $(document).ready(function () {
 
+      var Klachten = ["Pijnlijke keel", "Haaruitval", "Pijn of jeuk in oren","Huiduitslag op andere plaatsen","Onverklaarbare koude rillingen"];
+      var aantalKlachten = [24.2,20.8,14.9,13.7,12.4];
+
       var Highcharts = require('highcharts');
+
+      var graph = "False";
+
 
       // Load module after Highcharts is loaded
       require('highcharts/modules/exporting')(Highcharts);
 
       // Create the chart
       Highcharts.chart('container', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Klachten chart '
-    },
 
-    xAxis: {
-        type: 'category',
-        labels: {
-            rotation: -45,
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        }
-    },
-    yAxis: {
-        min: 0,
+    // Bar Graph
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: 'Klachten chart '
+      },
+
+      xAxis: {
+          type: 'category',
+          labels: {
+              rotation: -45,
+              style: {
+                  fontSize: '13px',
+                  fontFamily: 'Verdana, sans-serif'
+              }
+          }
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Aantal Klachten'
+          }
+      },
+      legend: {
+          enabled: false
+      },
+      tooltip: {
+          pointFormat: 'Aantal klachten: <b>{point.y:.1f}</b>'},
+      series: [{
+          name: 'Population',
+          data: [
+              [Klachten[0], aantalKlachten[0]],
+              [Klachten[1], aantalKlachten[1]],
+              [Klachten[2], aantalKlachten[2]],
+              [Klachten[3], aantalKlachten[3]],
+              [Klachten[4], aantalKlachten[4]],
+
+
+          ],
+          dataLabels: {
+              enabled: true,
+              rotation: -90,
+              color: '#FFFFFF',
+              align: 'right',
+              format: '{point.y:.1f}', // one decimal
+              y: 10, // 10 pixels down from the top
+              style: {
+                  fontSize: '13px',
+                  fontFamily: 'Verdana, sans-serif'
+              }
+          }
+      }]}
+
+      document.getElementById("myBtn").addEventListener("click", function(){
+        chart: {
+            type: 'column'
+        },
         title: {
-            text: 'Aantal Klachten'
-        }
-    },
-    legend: {
-        enabled: false
-    },
-    tooltip: {
-        pointFormat: 'Aantal klachten: <b>{point.y:.1f}</b>'},
-    series: [{
-        name: 'Population',
-        data: [
-            ['aliquet', 24.2],
-            ['scelerisque', 20.8],
-            ['consequat', 14.9],
-            ['Vestibulum', 13.7],
-            [' rhoncus', 13.1],
-            ['ullamcorper', 12.7],
-            ['Quisque ', 12.4],
+            text: 'Klachten chart '
+        },
 
-        ],
-        dataLabels: {
-            enabled: true,
-            rotation: -90,
-            color: '#FFFFFF',
-            align: 'right',
-            format: '{point.y:.1f}', // one decimal
-            y: 10, // 10 pixels down from the top
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
+        xAxis: {
+            type: 'category',
+            labels: {
+                rotation: -45,
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
             }
-        }
-    }]
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Aantal Klachten'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            pointFormat: 'Aantal klachten: <b>{point.y:.1f}</b>'},
+        series: [{
+            name: 'Population',
+            data: [
+                [Klachten[0], aantalKlachten[0]],
+                [Klachten[1], aantalKlachten[1]],
+                [Klachten[2], aantalKlachten[2]],
+                [Klachten[3], aantalKlachten[3]],
+                [Klachten[4], aantalKlachten[4]],
+
+
+            ],
+            dataLabels: {
+                enabled: true,
+                rotation: -90,
+                color: '#FFFFFF',
+                align: 'right',
+                format: '{point.y:.1f}', // one decimal
+                y: 10, // 10 pixels down from the top
+                style: {
+                    fontSize: '13px',
+                    fontFamily: 'Verdana, sans-serif'
+                }
+            }
+        }]
+       });
+
+
+
+
+
 });
 
 
