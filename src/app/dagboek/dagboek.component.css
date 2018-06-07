@@ -1,0 +1,16 @@
+.btn  {
+  background-color: #26c423;
+  color: white;
+  border: none;
+  margin-left: 5px;
+  margin-top: 5px;
+
+}
+.custom-control-label label::after {
+
+  color: #26c423;
+}
+footer {
+  margin-top: 30px;
+}
+
