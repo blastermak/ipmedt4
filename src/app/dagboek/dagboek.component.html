@@ -82,17 +82,17 @@
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Datum</h4>
 
-      <p>Simple datepicker</p>
+      <!--<p>Simple datepicker</p>-->
 
-      <dagboek #dp [(ngModel)]="model" (navigate)="date = $event.next"></dagboek>
+      <!--<dagboek #dp [(ngModel)]="model" (navigate)="date = $event.next"></dagboek>-->
 
-      <hr/>
+      <!--<hr/>-->
 
-      <button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>
-      <button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>
-      <button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
+      <!--<button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>-->
+      <!--<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>-->
+      <!--<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>-->
 
-      <hr/>
+      <!--<hr/>-->
 
       <pre>Month: {{ date.month }}.{{ date.year }}</pre>
       <pre>Model: {{ model | json }}</pre>
