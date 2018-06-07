@@ -23,7 +23,7 @@ export class QuizComponent implements OnInit {
       // store answers in an array
       // n = (new Date()).getTime();
       const answers = [];
-      let score = 0;
+      const score = 0;
 
       // if the restart button is pressed, start quiz again
       $('.back').click(function() {
@@ -89,7 +89,6 @@ export class QuizComponent implements OnInit {
           if (score >= 6 && score <= 12) {
             $('#score').html('Je hebt veel symptomen. Een afspraak bij de huisarts is een goed idee');
           }
-        }
         $('.card-' + (currentCard + 1)).delay(450).removeClass('hidden').hide().fadeIn();
       });
     });
