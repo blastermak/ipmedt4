@@ -12,7 +12,8 @@ import { DagboekComponent } from './dagboek/dagboek.component';
 import {QuizComponent} from './quiz/quiz.component';
 import { GraphComponent } from './graph/graph.component';
 import { InfoComponent} from './info/info.component';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component'
     QuizComponent,
     GraphComponent,
     InfoComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

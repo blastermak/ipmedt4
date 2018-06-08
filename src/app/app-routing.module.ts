@@ -7,6 +7,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { InfoComponent } from './info/info.component';
 import { GraphComponent } from './graph/graph.component';
 import { LoginComponent} from './login/login.component';
+import { ProfileComponent} from './profile/profile.component';
 //import { PageNotFoundComponent }    from './not-found.component';
 
 const appRoutes: Routes = [{
@@ -27,6 +28,9 @@ const appRoutes: Routes = [{
 },{
   path: 'graph',
   component: GraphComponent
+},{
+  path: 'profile',
+  component: ProfileComponent
 },{
   path: 'login',
   component: LoginComponent
