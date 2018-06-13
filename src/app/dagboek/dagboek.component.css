@@ -17,3 +17,13 @@ footer {
 .diary-emoji{
   height: 3em;
 }
+
+
+@media all and (min-width:0px) and (max-width:575px)
+{
+  .emoji {
+    padding-right: 0px !important;
+
+
+  }
+}
