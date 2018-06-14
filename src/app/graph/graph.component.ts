@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import {Chart} from 'chart.js';
+import { Component } from '/.dagboek.component';
 
 declare var require: any
 
