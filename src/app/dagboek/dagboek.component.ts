@@ -16,11 +16,10 @@ export class DagboekComponent implements OnInit {
     $( document ).ready(function () {
 
       const symAr = [];
-      var symArBackup
+      var symArBackup;
 
       if (typeof(Storage) !== "undefined") {
         symArBackup = localStorage.getItem('sym');
-        console.log(symArBackup)
       }
       else {
         console.log('no info');

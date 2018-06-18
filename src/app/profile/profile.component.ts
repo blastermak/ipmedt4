@@ -138,11 +138,9 @@ chart: {
        type: 'spline'
    },
    title: {
-       text: 'Snow depth at Vikjafjellet, Norway'
+       text: 'Aantal klachten in het loop van tijd'
    },
-   subtitle: {
-       text: 'Irregular time data in Highcharts JS'
-   },
+
    xAxis: {
        type: 'datetime',
        dateTimeLabelFormats: { // don't display the dummy year
@@ -178,7 +176,7 @@ chart: {
    // of 1970/71 in order to be compared on the same x axis. Note
    // that in JavaScript, months start at 0 for January, 1 for February etc.
    series: [{
-       name: "Winter 2014-2015",
+       name: "Hoofdpijn",
        data: [
            [Date.UTC(1970, 10, 25), 0],
            [Date.UTC(1970, 11,  6), 0.25],
@@ -209,7 +207,7 @@ chart: {
            [Date.UTC(1971, 6,  4), 0]
        ]
    }, {
-       name: "Winter 2015-2016",
+       name: "Spierpijn",
        data: [
            [Date.UTC(1970, 10,  9), 0],
            [Date.UTC(1970, 10, 15), 0.23],
@@ -236,7 +234,7 @@ chart: {
            [Date.UTC(1971, 5,  7), 0]
        ]
    }, {
-       name: "Winter 2016-2017",
+       name: "Depressieve gevoelens",
        data: [
            [Date.UTC(1970, 9, 15), 0],
            [Date.UTC(1970, 9, 31), 0.09],
