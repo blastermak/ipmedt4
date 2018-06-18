@@ -48,7 +48,9 @@ export class DagboekComponent implements OnInit {
                 symAr.push(temp);
                 console.log(symAr);
                 localStorage.setItem('sym', symAr[0] + symArBackup );
+                window.location.href = '/profile';
               }
+
       });
 
     });
