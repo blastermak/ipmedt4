@@ -25,8 +25,8 @@ export class DagboekComponent implements OnInit {
             const temp = $(this).parent().text().trim();
             symAr.push(temp);
             console.log(symAr);
-          }
-          if ( $('[id^="sym"]:checked').length = -1 ) {
+          } else  {
+            console.log("why");
             const temp = $(this).parent().text().trim();
             const index = symAr.indexOf(temp);
             if (index > -1) {
