@@ -19,23 +19,31 @@ export class DagboekComponent implements OnInit {
 
 
 
-      $('[id^="sym"]').on('click', function () {
-          if ($('[id^="sym"]:checked').length > 0 ) {
-            console.log($(this).parent().text().trim());
-            const temp = $(this).parent().text().trim();
-            symAr.push(temp);
-            console.log(symAr);
-          } else  {
-            console.log("why");
-            const temp = $(this).parent().text().trim();
-            const index = symAr.indexOf(temp);
-            if (index > -1) {
-              symAr.splice(index, 1);
-            }
-            console.log(symAr);
-          }
-      });
+      // $('[id^="sym"]').on('click', function () {
+      //     if ($('[id^="sym"]:checked').length > 0 ) {
+      //       console.log($(this).parent().text().trim());
+      //       const temp = $(this).parent().text().trim();
+      //       symAr.push(temp);
+      //       console.log(symAr);
+      //     } else  {
+      //       console.log("why");
+      //       const temp = $(this).parent().text().trim();
+      //       const index = symAr.indexOf(temp);
+      //       if (index > -1) {
+      //         symAr.splice(index, 1);
+      //       }
+      //       console.log(symAr);
+      //     }
+      // });
+
       $('#submit').on('click', function () {
+        if ($('[id^="sym"]:checked').length ) {
+                console.log($('[id^="sym"]:checked').parent().text().trim());
+                const temp = $('[id^="sym"]:checked').parent().text().trim();
+                symAr.push(temp);
+                console.log(symAr);
+                localStorage.setItem('sym', symAr[0]);
+              }
       });
     });
 
