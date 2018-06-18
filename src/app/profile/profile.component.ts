@@ -23,11 +23,19 @@ export class ProfileComponent implements OnInit {
           var SymptomenValues = [0,0,0,0,0,0,0,0,0,0,0,0];
 
           if (typeof(Storage) !== "undefined") {
+            //SymptomenValues = JSON.parse(localStorage.getItem("symvalues"));
             values = localStorage.getItem("sym");
             splitValues = values.split(/(?=[A-Z])/)
-            console.log("Sym Values: " + localStorage.getItem("symValues"))
-            //SymptomenValues = localStorage.getItem("symValues")
-          } else {
+
+          }
+          else {
+            console.log('no info');
+          }
+          
+          if (typeof(Storage) === "symvalues") {
+            SymptomenValues = JSON.parse(localStorage.getItem("symvalues"));
+          }
+          else {
             console.log('no info');
           }
 
@@ -40,7 +48,9 @@ export class ProfileComponent implements OnInit {
 
           }
           console.log(SymptomenValues);
-          localStorage.setItem('symValues',SymptomenValues)
+          var symp = JSON.stringify(SymptomenValues);
+
+          localStorage.setItem('symValues', symp)
           /*for (var j = 0; j < SymptomenValues.length; j++){
             console.log(SymptomenValues[j])
           }*/
