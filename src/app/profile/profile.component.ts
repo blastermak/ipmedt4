@@ -17,6 +17,44 @@ export class ProfileComponent implements OnInit {
 
 
         $(document).ready(function () {
+          var values;
+          var splitValues;
+          var Symptomen = ["Hoofdpijn","Spierpijn","Depressieve" "gevoelens","Tintelingen","Slapeloosheid","Grieperig","Haaruitval","Vermoeid","Buikpijn","Duizeligheid","Klierzwelling (hals, oksels, liezen)","Hartkloppingen", "overslaan van het hart"];
+          var SymptomenValues = [0,0,0,0,0,0,0,0,0,0,0,0];
+
+          if (typeof(Storage) !== "undefined") {
+            //SymptomenValues = JSON.parse(localStorage.getItem("symvalues"));
+            values = localStorage.getItem("sym");
+            splitValues = values.split(/(?=[A-Z])/)
+
+          }
+          else {
+            console.log('no info');
+          }
+          
+          if (typeof(Storage) === "symvalues") {
+            SymptomenValues = JSON.parse(localStorage.getItem("symvalues"));
+          }
+          else {
+            console.log('no info');
+          }
+
+          for (var i = 0; i < Symptomen.length; i++){
+            for (var j = 0; j < splitValues.length; j++){
+              if (Symptomen[i] === splitValues[j]){
+                SymptomenValues[i] += 1
+              }
+            }
+
+          }
+          console.log(SymptomenValues);
+          var symp = JSON.stringify(SymptomenValues);
+
+          localStorage.setItem('symValues', symp)
+          /*for (var j = 0; j < SymptomenValues.length; j++){
+            console.log(SymptomenValues[j])
+          }*/
+
 
           var Klachten = ["Pijnlijke keel", "Haaruitval", "Pijn of jeuk in oren","Huiduitslag op andere plaatsen","Onverklaarbare koude rillingen"];
           var aantalKlachten = [24.2,20.8,14.9,13.7,12.4];
@@ -66,11 +104,19 @@ export class ProfileComponent implements OnInit {
           series: [{
               name: 'Population',
               data: [
-                  [Klachten[0], aantalKlachten[0]],
-                  [Klachten[1], aantalKlachten[1]],
-                  [Klachten[2], aantalKlachten[2]],
-                  [Klachten[3], aantalKlachten[3]],
-                  [Klachten[4], aantalKlachten[4]],
+                  [Symptomen[0], SymptomenValues[0]],
+                  [Symptomen[1], SymptomenValues[1]],
+                  [Symptomen[2], SymptomenValues[2]],
+                  [Symptomen[3], SymptomenValues[3]],
+                  [Symptomen[4], SymptomenValues[4]],
+                  [Symptomen[5], SymptomenValues[5]],
+                  [Symptomen[6], SymptomenValues[6]],
+                  [Symptomen[7], SymptomenValues[7]],
+                  [Symptomen[8], SymptomenValues[8]],
+                  [Symptomen[9], SymptomenValues[9]],
+                  [Symptomen[10], SymptomenValues[10]],
+                  [Symptomen[11], SymptomenValues[11]],
+
 
 
               ],

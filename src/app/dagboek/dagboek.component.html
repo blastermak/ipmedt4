@@ -116,7 +116,7 @@
                 </div>
       </div>
 
-      <form class="needs-validation" novalidate>
+      <form class="checkboxes" novalidate>
 
         <div class="form-group">
           <label for="comment">Schrijf hier uw gedachtes/gevoelens:</label>
@@ -130,7 +130,7 @@
         <h2>Symptomen</h2>
 
         <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="sym1">
+          <input value="Hoofdpijn" type="checkbox" class="custom-control-input" id="sym1">
           <label class="custom-control-label" for="sym1">Hoofdpijn</label>
         </div>
 
@@ -140,12 +140,12 @@
         </div>
 
         <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="sym3">
+          <input value="Depressieve gevoelens" type="checkbox" class="custom-control-input" id="sym3">
           <label class="custom-control-label" for="sym3">Depressieve gevoelens</label>
         </div>
 
         <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="sym4">
+          <input value="Tintelingen" type="checkbox" class="custom-control-input" id="sym4">
           <label class="custom-control-label" for="sym4">Tintelingen</label>
         </div>
 
@@ -193,8 +193,9 @@
 
         <hr class="mb-4">
 
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Sla gegevens op</button>
+
       </form>
+      <button id="submit" class="btn btn-primary btn-lg btn-block" >Sla gegevens op</button>
     </div>
   </div>
 
@@ -210,35 +211,6 @@
 </footer>
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="../../assets/js/vendor/popper.min.js"></script>
-<script src="../../dist/js/bootstrap.min.js"></script>
-<script src="../../assets/js/vendor/holder.min.js"></script>
-<script>
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-  (function() {
-    'use strict';
 
-    window.addEventListener('load', function() {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('needs-validation');
-
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-  })();
-</script>
 </body>
 </html>
