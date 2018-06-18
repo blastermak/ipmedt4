@@ -16,9 +16,15 @@ export class DagboekComponent implements OnInit {
     $( document ).ready(function () {
 
       const symAr = [];
+      var symArBackup
 
-
-
+      if (typeof(Storage) !== "undefined") {
+        symArBackup = localStorage.getItem('sym');
+        console.log(symArBackup)
+      }
+      else {
+        console.log('no info');
+      }
       // $('[id^="sym"]').on('click', function () {
       //     if ($('[id^="sym"]:checked').length > 0 ) {
       //       console.log($(this).parent().text().trim());
@@ -42,9 +48,10 @@ export class DagboekComponent implements OnInit {
                 const temp = $('[id^="sym"]:checked').parent().text().trim();
                 symAr.push(temp);
                 console.log(symAr);
-                localStorage.setItem('sym', symAr[0]);
+                localStorage.setItem('sym', symAr[0] + symArBackup );
               }
       });
+
     });
 
 

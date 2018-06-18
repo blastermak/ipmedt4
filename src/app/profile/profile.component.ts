@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import {Chart} from 'chart.js';
 
-declare var require: any
+declare var require: any;
 
 @Component({
   selector: 'app-profile',
@@ -17,43 +17,46 @@ export class ProfileComponent implements OnInit {
 
 
         $(document).ready(function () {
-          let values;
-          let splitValues;
-          const Symptomen = ['Hoofdpijn', 'Spierpijn', 'Depressieve gevoelens', 'Tintelingen', 'Slapeloosheid', 'Grieperig', 'Haaruitval',
-            'Vermoeid', 'Buikpijn', 'Duizeligheid', 'Klierzwelling (hals, oksels, liezen)', 'Hartkloppingen', 'overslaan van het hart'];
-          const SymptomenValues = [0, 0, 0, 0, 0 ,0 , 0, 0, 0, 0, 0, 0];
+          var values;
+          var splitValues;
+          var Symptomen = ["Hoofdpijn","Spierpijn","Depressieve gevoelens","Tintelingen","Slapeloosheid","Grieperig","Haaruitval","Vermoeid","Buikpijn","Duizeligheid","Klierzwelling (hals, oksels, liezen)","Hartkloppingen", "overslaan van het hart"];
+          var SymptomenValues = [0,0,0,0,0,0,0,0,0,0,0,0];
 
-          if (typeof(Storage) !== 'undefined') {
-            // SymptomenValues = JSON.parse(localStorage.getItem('symvalues'));
-            values = localStorage.getItem('sym');
-            splitValues = values.split(/(?=[A-Z])/);
+          if (typeof(Storage) !== "undefined") {
+            //SymptomenValues = JSON.parse(localStorage.getItem("symvalues"));
+            values = localStorage.getItem("sym");
+            splitValues = values.split(/(?=[A-Z])/)
+            console.log(values)
 
-          } else { console.log('no info'); }
-          // SymptomenValues = JSON.parse(localStorage.getItem('symvalues'));
+          }
+          else {
+            console.log('no info');
+          }
 
-          for (let i = 0; i < Symptomen.length; i++) {
-            for (let j = 0; j < splitValues.length; j++) {
-              if (Symptomen[i] === splitValues[j]) {
-                SymptomenValues[i] += 1;
+          for (var i = 0; i < Symptomen.length; i++){
+            for (var j = 0; j < splitValues.length; j++){
+              if (Symptomen[i] == splitValues[j]){
+                SymptomenValues[i] += 1
               }
             }
 
           }
-          console.log(SymptomenValues);
-          const symp = JSON.stringify(SymptomenValues);
 
-          localStorage.setItem('symValues', symp);
+          console.log(SymptomenValues);
+          var symp = JSON.stringify(SymptomenValues);
+
+          localStorage.setItem('symValues', symp)
           /*for (var j = 0; j < SymptomenValues.length; j++){
             console.log(SymptomenValues[j])
           }*/
 
 
-          const Klachten = ['Pijnlijke keel', 'Haaruitval', 'Pijn of jeuk in oren', 'Huiduitslag op andere plaatsen', 'Onverklaarbare koude rillingen'];
-          const aantalKlachten = [24.2, 20.8, 14.9, 13.7, 12.4];
+          var Klachten = ["Pijnlijke keel", "Haaruitval", "Pijn of jeuk in oren","Huiduitslag op andere plaatsen","Onverklaarbare koude rillingen"];
+          var aantalKlachten = [24.2,20.8,14.9,13.7,12.4];
 
-          const Highcharts = require('highcharts');
+          var Highcharts = require('highcharts');
 
-          const graph = 'False';
+          var graph = "False";
 
 
           // Load module after Highcharts is loaded
@@ -175,7 +178,7 @@ chart: {
    // of 1970/71 in order to be compared on the same x axis. Note
    // that in JavaScript, months start at 0 for January, 1 for February etc.
    series: [{
-       name: 'Winter 2014-2015',
+       name: "Winter 2014-2015",
        data: [
            [Date.UTC(1970, 10, 25), 0],
            [Date.UTC(1970, 11,  6), 0.25],
@@ -206,7 +209,7 @@ chart: {
            [Date.UTC(1971, 6,  4), 0]
        ]
    }, {
-       name: 'Winter 2015-2016',
+       name: "Winter 2015-2016",
        data: [
            [Date.UTC(1970, 10,  9), 0],
            [Date.UTC(1970, 10, 15), 0.23],
@@ -233,7 +236,7 @@ chart: {
            [Date.UTC(1971, 5,  7), 0]
        ]
    }, {
-       name: 'Winter 2016-2017',
+       name: "Winter 2016-2017",
        data: [
            [Date.UTC(1970, 9, 15), 0],
            [Date.UTC(1970, 9, 31), 0.09],
@@ -289,10 +292,10 @@ chart: {
            [Date.UTC(1971, 4, 18), 0.54],
            [Date.UTC(1971, 4, 21), 0.34],
            [Date.UTC(1971, 4, 25), 0]
-       ]
-   }]
+           ]
+       }]
 
-});
+    });
 // End 2nd graph
 
         });
