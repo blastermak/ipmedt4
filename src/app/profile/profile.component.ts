@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit {
         $(document).ready(function () {
           var values;
           var splitValues;
-          var Symptomen = ["Hoofdpijn","Spierpijn","Depressieve gevoelens","Tintelingen","Slapeloosheid","Grieperig","Haaruitval","Vermoeid","Buikpijn","Duizeligheid","Klierzwelling (hals, oksels, liezen)","Hartkloppingen", "overslaan van het hart"];
+          var Symptomen = ["Hoofdpijn","Spierpijn","Depressieve gevoelens","Tintelingen","Slapeloosheid","Grieperig","Haaruitval","Vermoeid","Buikpijn","Duizeligheid","Klierzwelling (hals, oksels, liezen)","Hartkloppingen, overslaan van het hart"];
           var SymptomenValues = [0,0,0,0,0,0,0,0,0,0,0,0];
 
           if (typeof(Storage) !== "undefined") {
@@ -98,6 +98,7 @@ export class ProfileComponent implements OnInit {
               pointFormat: 'Aantal klachten: <b>{point.y:.1f}</b>'},
           series: [{
               name: 'Population',
+              "colorByPoint": true,
               data: [
                   [Symptomen[0], SymptomenValues[0]],
                   [Symptomen[1], SymptomenValues[1]],
@@ -153,7 +154,7 @@ chart: {
    },
    yAxis: {
        title: {
-           text: 'Snow depth (m)'
+           text: 'Aantal klachten'
        },
        min: 0
    },
@@ -170,7 +171,7 @@ chart: {
        }
    },
 
-   colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
+   colors: ['#26c460', '#258423', '#26c423', '#26c423', '#26c423'],
 
    // Define the data points. All series have a dummy year
    // of 1970/71 in order to be compared on the same x axis. Note
