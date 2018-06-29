@@ -15,3 +15,71 @@ border:2px solid #26c423 ;
 .bot-border{
   border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0
 }
+.tabDiv {
+  grid-area: tabDiv;
+  display: grid;
+  border-radius: 3px 3px 0px 0px;
+  width: 100%;
+  margin: 0 auto;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 75px ;
+  grid-gap: 0px;
+  grid-template-areas:   "ma di wo do vrij za zo";
+}
+#dag1{
+  grid-area: ma;
+  border-radius: 3px 0px 0px 0px;
+  border-right: 1px solid black;
+}
+#dag2{
+  grid-area: di;
+  border-right: 1px solid black;
+}
+#dag3{
+  grid-area:wo;
+  border-right: 1px solid black;
+}
+#dag4{
+  grid-area:do;
+  border-right: 1px solid black;
+}
+#dag5{
+  grid-area:vrij;
+  border-right: 1px solid black;
+}
+#dag6{
+  grid-area:za;
+  border-right: 1px solid black;
+}
+#dag7{
+  grid-area: zo;
+  border-radius:  0px 3px 0px 0px;
+}
+.tab {
+  background-color: #26c423;
+  box-sizing: border-box;
+  font-size: 20px;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+.tab:focus {outline:0;}
+
+.tab.active{
+  background-color: rgba(0,0,0,.8);
+  color:white;
+  cursor:default;
+}
+
+.tab:hover{
+  background-color: rgba(0,0,0,.8);
+  color: white;
+}
+.tab.active:hover{
+  background-color: rgba(0,0,0,.8);
+}
+p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
