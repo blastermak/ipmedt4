@@ -22,6 +22,13 @@ export class ProfileComponent implements OnInit {
           var Symptomen = ["Hoofdpijn","Spierpijn","Depressieve gevoelens","Tintelingen","Slapeloosheid","Grieperig","Haaruitval","Vermoeid","Buikpijn","Duizeligheid","Klierzwelling (hals, oksels, liezen)","Hartkloppingen, overslaan van het hart"];
           var SymptomenValues = [0,0,0,0,0,0,0,0,0,0,0,0];
 
+          $('[id^="dag"]').on('click', function () {
+
+            $('.active').attr('class', 'tab');
+
+            $('[id^="dag"]').addClass(' active');
+          });
+
           if (localStorage.getItem("sym") !== null) {
             values = localStorage.getItem("sym");
             splitValues = values.split(/(?=[A-Z])/)
