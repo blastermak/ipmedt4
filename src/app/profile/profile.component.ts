@@ -25,14 +25,23 @@ export class ProfileComponent implements OnInit {
           $('[id^="dag"]').on('click', function () {
 
             $('.active').attr('class', 'tab');
+            $('.actief').css('display', 'none');
+            $('.actief').removeClass(' actief');
 
-            $('[id^="dag"]').addClass(' active');
+            $(this).addClass(' active');
+            const dag = $(this).html();
+            console.log($('#' + dag));
+
+            $('#' + dag).addClass(' actief');
+            $('#' + dag).css('display', 'block');
+
+
           });
 
           if (localStorage.getItem("sym") !== null) {
             values = localStorage.getItem("sym");
-            splitValues = values.split(/(?=[A-Z])/)
-            console.log(values)
+            splitValues = values.split(/(?=[A-Z])/);
+            console.log(values);
 
           }
           else {

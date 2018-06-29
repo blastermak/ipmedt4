@@ -80,6 +80,37 @@ border:2px solid #26c423 ;
   background-color: rgba(0,0,0,.8);
 }
 p {
+   margin-left: 20px;
+   margin-right: 20px;
+}
+h2 {
   margin-left: 20px;
   margin-right: 20px;
+}
+.actief {
+}
+#Maandag {
+
+}
+#Dinsdag{
+  display: none;
+}
+#Woensdag{
+  display: none;
+}
+#Donderdag {
+  display: none;
+}
+#Vrijdag {
+  display: none;
+}
+#Zaterdag{
+  display: none;
+}
+#Zondag{
+  display: none;
+}
+footer{
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
