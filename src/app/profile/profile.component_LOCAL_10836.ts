@@ -22,10 +22,7 @@ export class ProfileComponent implements OnInit {
           var Symptomen = ["Hoofdpijn","Spierpijn","Depressieve gevoelens","Tintelingen","Slapeloosheid","Grieperig","Haaruitval","Vermoeid","Buikpijn","Duizeligheid","Klierzwelling (hals, oksels, liezen)","Hartkloppingen, overslaan van het hart"];
           var SymptomenValues = [0,0,0,0,0,0,0,0,0,0,0,0];
 
-
-
-          if (typeof(Storage) !== "undefined") {
-            //SymptomenValues = JSON.parse(localStorage.getItem("symvalues"));
+          if (localStorage.getItem("sym") !== null) {
             values = localStorage.getItem("sym");
             splitValues = values.split(/(?=[A-Z])/)
             console.log(values)
