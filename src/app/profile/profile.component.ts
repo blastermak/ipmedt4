@@ -23,6 +23,13 @@ export class ProfileComponent implements OnInit {
           var SymptomenValues = [0,0,0,0,0,0,0,0,0,0,0,0];
 
 
+          ($('[id^="dag"]').on('click', function () {
+            console.log($('[id^="dag"]'));
+
+            $('.active').attr('class', 'tab');
+
+            $('[id^="dag"]').attr('class').replace(' active', '');
+          }));
 
           if (typeof(Storage) !== "undefined") {
             //SymptomenValues = JSON.parse(localStorage.getItem("symvalues"));
